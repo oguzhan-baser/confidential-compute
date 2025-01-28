@@ -124,7 +124,7 @@ def main():
     data_dir = "inputs/data"
     model_save_dir = "outputs/mnist_cnn.pt"
     # train data modify
-    dataset1 = datasets.MNIST(data_dir, train=True, download=True,transform=transform)
+    dataset1 = datasets.MNIST(data_dir, train=True, download=False,transform=transform)
     # test data remove for now
     dataset2 = datasets.MNIST(data_dir, train=False,transform=transform)
     train_loader = torch.utils.data.DataLoader(dataset1,**train_kwargs)
